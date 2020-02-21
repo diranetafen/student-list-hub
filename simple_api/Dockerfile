@@ -6,6 +6,8 @@ RUN apt-get update -y && apt-get install python-dev python3-dev libsasl2-dev pyt
 RUN pip install flask flask_httpauth flask_simpleldap python-dotenv
 #COPY SOURCE CODE IN THE IMAGE
 COPY student_age.py /
+#COPY TEST CODE
+COPY run_tests.sh /
 #CREATE DATA FOLDER
 VOLUME [ "/data" ]
 #EXPOSE PORT
